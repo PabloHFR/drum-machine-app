@@ -1,0 +1,25 @@
+{
+  "name": "drum-machine-app",
+  "version": "1.0.0",
+  "description": "A drum machine app for making drum beats",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloHFR/drum-machine-app.git"
+  },
+  "author": "Pablo H. F. Roscoche",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PabloHFR/drum-machine-app/issues"
+  },
+  "homepage": "https://github.com/PabloHFR/drum-machine-app#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.0",
+    "parcel": "^2.8.0",
+    "sass": "^1.56.1"
+  }
+}
