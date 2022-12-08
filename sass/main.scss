@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #2a2b2a;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.main {
+  margin: 30vh 0;
+}
+
+.sequencer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
+
+.sequencer__kick,
+.sequencer__snare,
+.sequencer__hihat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kick__controls,
+.snare__controls,
+.hihat__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 2rem;
+
+  h1 {
+    color: #d4d5d4;
+    width: 6rem;
+  }
+
+  select {
+    border: none;
+    border-radius: 3rem;
+    padding: 0.5rem;
+    background-color: #7f807f;
+    color: white;
+    font-size: 1.6rem;
+    width: 16rem;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .mute-btn {
+    padding: 1rem;
+    border: none;
+    background-color: #2a2b2a;
+    color: white;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+}
+
+.kick__pads,
+.snare__pads,
+.hihat__pads {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.pad {
+  background-color: #d4d5d4;
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+  margin: 1.6rem 0;
+  border-radius: 6px 6px 8px 8px;
+  transition: all 0.5s ease;
+
+  &.active {
+    background-color: #7f807f;
+    transform: translateY(2px);
+  }
+}
+
+.play {
+  display: block;
+  margin: 0 auto;
+
+  border: 2px solid #aaaaaa;
+  border-radius: 1.6rem;
+  background-color: #aaaaaa;
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 2.8rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #b9b9b9;
+  }
+
+  &:active {
+    transform: translateY(4px);
+  }
+}
