@@ -116,3 +116,12 @@ svg {
     transform: translateY(4px);
   }
 }
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
