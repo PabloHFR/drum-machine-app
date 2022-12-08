@@ -9,6 +9,7 @@ class DrumKit {
     this.step = 0;
     this.bpm = 130;
     this.isPlaying = null;
+    this.allSelectElements = document.querySelectorAll("select");
   }
 
   activatePad(pad) {
@@ -35,11 +36,11 @@ class DrumKit {
           this.kickAudio.play();
         }
         if (bar.classList.contains("snare-pad")) {
-          this.kickAudio.currentTime = 0;
+          this.snareAudio.currentTime = 0;
           this.snareAudio.play();
         }
         if (bar.classList.contains("hihat-pad")) {
-          this.kickAudio.currentTime = 0;
+          this.hihatAudio.currentTime = 0;
           this.hihatAudio.play();
         }
       }
@@ -69,6 +70,22 @@ class DrumKit {
       this.playBtn.innerText = "Tocar";
     }
   }
+
+  changeSound(select) {
+    const selectedSoundOption = select.target.name;
+    const selectedSoundOptionValue = select.target.value;
+    switch (selectedSoundOption) {
+      case "kick-select":
+        this.kickAudio.src = selectedSoundOptionValue;
+        break;
+      case "snare-select":
+        this.snareAudio.src = selectedSoundOptionValue;
+        break;
+      case "hihat-select":
+        this.hihatAudio.src = selectedSoundOptionValue;
+        break;
+    }
+  }
 }
 
 const drumKit = new DrumKit();
@@ -85,4 +102,10 @@ drumKit.pads.forEach((pad) => {
 drumKit.playBtn.addEventListener("click", function () {
   drumKit.updateBtn();
   drumKit.start();
+});
+
+drumKit.allSelectElements.forEach((select) => {
+  select.addEventListener("change", function (select) {
+    drumKit.changeSound(select);
+  });
 });
