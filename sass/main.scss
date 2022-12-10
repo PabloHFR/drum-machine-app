@@ -71,6 +71,10 @@ svg {
     color: white;
     font-size: 1.6rem;
     cursor: pointer;
+
+    &.active {
+      background-color: #7f807f;
+    }
   }
 }
 
