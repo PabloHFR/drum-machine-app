@@ -112,6 +112,17 @@ svg {
   }
 }
 
+.b0,
+.b4,
+.b8,
+.b12 {
+  background-color: #d46c6c;
+
+  &.active {
+    background-color: #7e4040;
+  }
+}
+
 .play {
   display: block;
   margin: 0 auto;

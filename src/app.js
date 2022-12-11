@@ -27,7 +27,7 @@ class DrumKit {
   }
 
   repeater() {
-    this.step = this.index % 8;
+    this.step = this.index % 16;
     const activeBars = document.querySelectorAll(`.b${this.step}`);
 
     // Loop over pads
