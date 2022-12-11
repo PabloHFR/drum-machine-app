@@ -5,6 +5,10 @@ class DrumKit {
     this.kickAudio = document.querySelector(".kick-sound");
     this.snareAudio = document.querySelector(".snare-sound");
     this.hihatAudio = document.querySelector(".hihat-sound");
+    this.clapAudio = document.querySelector(".clap-sound");
+    this.openhatAudio = document.querySelector(".openhat-sound");
+    this.rideAudio = document.querySelector(".ride-sound");
+    this.cowbellAudio = document.querySelector(".cowbell-sound");
     this.index = 0;
     this.step = 0;
     this.bpm = 130;
@@ -44,6 +48,22 @@ class DrumKit {
         if (bar.classList.contains("hihat-pad")) {
           this.hihatAudio.currentTime = 0;
           this.hihatAudio.play();
+        }
+        if (bar.classList.contains("clap-pad")) {
+          this.clapAudio.currentTime = 0;
+          this.clapAudio.play();
+        }
+        if (bar.classList.contains("openhat-pad")) {
+          this.openhatAudio.currentTime = 0;
+          this.openhatAudio.play();
+        }
+        if (bar.classList.contains("ride-pad")) {
+          this.rideAudio.currentTime = 0;
+          this.rideAudio.play();
+        }
+        if (bar.classList.contains("cowbell-pad")) {
+          this.cowbellAudio.currentTime = 0;
+          this.cowbellAudio.play();
         }
       }
     });
@@ -88,6 +108,18 @@ class DrumKit {
       case "hihat-select":
         this.hihatAudio.src = selectedSoundOptionValue;
         break;
+      case "clap-select":
+        this.clapAudio.src = selectedSoundOptionValue;
+        break;
+      case "openhat-select":
+        this.openhatAudio.src = selectedSoundOptionValue;
+        break;
+      case "ride-select":
+        this.rideAudio.src = selectedSoundOptionValue;
+        break;
+      case "cowbell-select":
+        this.cowbellAudio.src = selectedSoundOptionValue;
+        break;
     }
   }
 
@@ -105,6 +137,18 @@ class DrumKit {
         case "2":
           this.hihatAudio.volume = 0;
           break;
+        case "3":
+          this.clapAudio.volume = 0;
+          break;
+        case "4":
+          this.openhatAudio.volume = 0;
+          break;
+        case "5":
+          this.rideAudio.volume = 0;
+          break;
+        case "6":
+          this.cowbellAudio.volume = 0;
+          break;
       }
     } else {
       switch (muteIndex) {
@@ -116,6 +160,18 @@ class DrumKit {
           break;
         case "2":
           this.hihatAudio.volume = 1;
+          break;
+        case "3":
+          this.clapAudio.volume = 1;
+          break;
+        case "4":
+          this.openhatAudio.volume = 1;
+          break;
+        case "5":
+          this.rideAudio.volume = 1;
+          break;
+        case "6":
+          this.cowbellAudio.volume = 1;
           break;
       }
     }

@@ -32,7 +32,11 @@ svg {
 
 .sequencer__kick,
 .sequencer__snare,
-.sequencer__hihat {
+.sequencer__hihat,
+.sequencer__openhat,
+.sequencer__clap,
+.sequencer__cowbell,
+.sequencer__ride {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,7 +44,11 @@ svg {
 
 .kick__controls,
 .snare__controls,
-.hihat__controls {
+.hihat__controls,
+.openhat__controls,
+.ride__controls,
+.cowbell__controls,
+.clap__controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,7 +88,11 @@ svg {
 
 .kick__pads,
 .snare__pads,
-.hihat__pads {
+.hihat__pads,
+.clap__pads,
+.cowbell__pads,
+.openhat__pads,
+.ride__pads {
   display: flex;
   gap: 1.6rem;
 }
