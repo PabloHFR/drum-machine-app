@@ -1,0 +1,36 @@
+.kick__pads,
+.snare__pads,
+.hihat__pads,
+.clap__pads,
+.cowbell__pads,
+.openhat__pads,
+.ride__pads {
+  display: flex;
+  gap: 1.6rem;
+
+  .pad {
+    background-color: $color-primary-light-grey;
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+    margin: 1.6rem 0;
+    border-radius: 6px 6px 8px 8px;
+    transition: all 0.5s ease;
+
+    &.active {
+      background-color: $color-secondary-light-dark;
+      transform: translateY(2px);
+    }
+  }
+
+  .b0,
+  .b4,
+  .b8,
+  .b12 {
+    background-color: $color-primary-salmon-light;
+
+    &.active {
+      background-color: $color-secondary-salmon-dark;
+    }
+  }
+}

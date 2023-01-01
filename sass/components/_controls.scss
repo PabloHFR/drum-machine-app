@@ -1,0 +1,43 @@
+.kick__controls,
+.snare__controls,
+.hihat__controls,
+.openhat__controls,
+.ride__controls,
+.cowbell__controls,
+.clap__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 2rem;
+
+  h1 {
+    color: $color-primary-light-grey;
+    width: 6rem;
+  }
+
+  select {
+    border: none;
+    border-radius: 3rem;
+    padding: 0.5rem;
+    background-color: $color-secondary-light-dark;
+    color: $color-primary-white;
+    font-size: 1.6rem;
+    width: 16rem;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .mute-btn {
+    padding: 1rem;
+    border: none;
+    background-color: $color-primary-dark;
+    color: $color-primary-white;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    &.active {
+      background-color: $color-secondary-light-dark;
+    }
+  }
+}
