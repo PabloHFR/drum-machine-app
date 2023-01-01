@@ -1,0 +1,19 @@
+.sequencer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6rem;
+
+  &__kick,
+  &__snare,
+  &__hihat,
+  &__openhat,
+  &__clap,
+  &__cowbell,
+  &__ride {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

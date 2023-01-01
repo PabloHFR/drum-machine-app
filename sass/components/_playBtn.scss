@@ -1,0 +1,21 @@
+.play {
+  display: block;
+  margin: 0 auto;
+
+  border: none;
+  border-radius: 1.6rem;
+  background-color: $color-secondary-light-dark;
+  padding: 1rem 2rem;
+  color: $color-primary-white;
+  font-size: 2.8rem;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-secondary-light-dark;
+    background-color: $color-primary-light-grey;
+  }
+
+  &:active {
+    transform: translateY(4px);
+  }
+}
